@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D9321FFA2498F38600BC7AA2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9321FF92498F38600BC7AA2 /* main.cpp */; };
+		D93220062498F47800BC7AA2 /* sums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D93220042498F47800BC7AA2 /* sums.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		D9321FF62498F38600BC7AA2 /* exercises */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = exercises; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9321FF92498F38600BC7AA2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D93220042498F47800BC7AA2 /* sums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sums.cpp; sourceTree = "<group>"; };
+		D93220052498F47800BC7AA2 /* sums.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sums.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,43 @@
 		D9321FF82498F38600BC7AA2 /* exercises */ = {
 			isa = PBXGroup;
 			children = (
+				D93220002498F3EF00BC7AA2 /* algorithms */,
 				D9321FF92498F38600BC7AA2 /* main.cpp */,
 			);
 			path = exercises;
+			sourceTree = "<group>";
+		};
+		D93220002498F3EF00BC7AA2 /* algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				D93220022498F40300BC7AA2 /* array */,
+				D93220012498F3FA00BC7AA2 /* graph */,
+				D93220032498F40E00BC7AA2 /* misc */,
+			);
+			path = algorithms;
+			sourceTree = "<group>";
+		};
+		D93220012498F3FA00BC7AA2 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = graph;
+			sourceTree = "<group>";
+		};
+		D93220022498F40300BC7AA2 /* array */ = {
+			isa = PBXGroup;
+			children = (
+				D93220042498F47800BC7AA2 /* sums.cpp */,
+				D93220052498F47800BC7AA2 /* sums.hpp */,
+			);
+			path = array;
+			sourceTree = "<group>";
+		};
+		D93220032498F40E00BC7AA2 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9321FFA2498F38600BC7AA2 /* main.cpp in Sources */,
+				D93220062498F47800BC7AA2 /* sums.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
