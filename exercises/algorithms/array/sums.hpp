@@ -28,6 +28,12 @@ namespace algorithms {
         run(std::vector<int> &nums, int k);
     };
 
+    class TwoSumLessThanK {
+    public:
+        std::pair<int, int>
+        run(std::vector<int> &nums, int k);
+    };
+
     } /* array */
 
 } /* algorithms */

@@ -48,5 +48,21 @@ int main(int argc, const char *argv[])
     } while (0);
     cout << endl;
 
+    cout << "TwoSumLessThanK:\n";
+    do {
+        algorithms::array::TwoSumLessThanK c;
+        std::vector<int> nums = {9, 7, 1, -3, 3, 4, -10};
+        int k = 7;
+        cout << "nums=[";
+        for (int i = 0; i < nums.size(); ++i) {
+            if (i) { cout << ","; }
+            cout << nums[i];
+        }
+        cout << "], k=" << k << endl;
+        std::pair<int, int> rst = c.run(nums, k);
+        cout << "<" << rst.first << "," << rst.second << ">\n";
+    } while (0);
+    cout << endl;
+
     return 0;
 }

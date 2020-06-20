@@ -6,6 +6,7 @@
 //  Copyright © 2020 冀宸. All rights reserved.
 //
 
+#include <map>
 #include <unordered_map>
 #include "sums.hpp"
 
@@ -42,7 +43,7 @@ OrderedTwoSum::run(vector<int> &nums, int k)
     pair<int, int> retval = {-1, -1};
 
     // sanity check
-    if (nums.size() < 2) {
+    if (nums.size() < 2 || nums[0] > k) {
         return retval;
     }
 
@@ -60,6 +61,39 @@ OrderedTwoSum::run(vector<int> &nums, int k)
         } else {
             ++l;
         }
+    }
+
+    return retval;
+}
+
+pair<int, int>
+TwoSumLessThanK::run(vector<int> &nums, int k)
+{
+    pair<int, int> retval = {-1, -1};
+    int max = INT_MIN;
+    map<int, int> orderedMap;
+
+    // sanity check
+    if (nums.size() < 2) {
+        return retval;
+    }
+
+    for (auto i = 0; i < nums.size(); ++i) {
+        // notice: upper_bound(k) will return an it that points to an element
+        // grater than k!
+        // lower_bound's retval will point exactly to k, or the greater one next
+        // to k.
+        auto it = orderedMap.lower_bound(k - nums[i]);
+        if (it != orderedMap.begin()) {
+            --it;
+            int sum = it->first + nums[i];
+            if (sum > max) {
+                max = sum;
+                retval.first = it->second;
+                retval.second = i;
+            }
+        }
+        orderedMap[nums[i]] = i;
     }
 
     return retval;
