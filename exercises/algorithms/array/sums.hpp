@@ -34,6 +34,12 @@ namespace algorithms {
         run(std::vector<int> &nums, int k);
     };
 
+    class ThreeSum {
+    public:
+        std::vector<std::vector<int>>
+        run(std::vector<int> &nums, int target);
+    };
+
     } /* array */
 
 } /* algorithms */
